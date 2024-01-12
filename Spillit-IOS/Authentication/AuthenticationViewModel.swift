@@ -6,13 +6,28 @@
 //
 
 import SwiftUI
+import GoogleSignIn
+import GoogleSignInSwift
 
-struct AuthenticationViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+@MainActor
+final class AuthenticationViewModel:ObservableObject{
+    func signInWithGoogle() async throws{
+        guard let tvc = Utilities.shared.topViewController() else {
+            // return some error here
+            return
+        }
+        
+        let gidSignInResult = try await GIDSignIn.sharedInstance.signIn(withPresenting: tvc)
+        
+        guard let idToken = gidSignInResult.user.idToken?.tokenString else{
+            //return an error
+            return
+        }
+        
+        let accessToken = gidSignInResult.user.accessToken.tokenString
+        let tokens = GoogleSignInResultModel(idToken: idToken, accessToken: accessToken)
+        try await AuthenticationManager.shared.signInWithGoogle(tokens: tokens)
+        
+            
     }
-}
-
-#Preview {
-    AuthenticationViewModel()
 }

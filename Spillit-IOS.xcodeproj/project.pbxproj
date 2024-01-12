@@ -40,6 +40,17 @@
 		0761871C2B3C94E500DAB47F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0761871B2B3C94E500DAB47F /* FirebaseStorage */; };
 		0761871E2B3C94E500DAB47F /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 0761871D2B3C94E500DAB47F /* FirebaseStorageCombine-Community */; };
 		076187222B3C990300DAB47F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076187212B3C990300DAB47F /* LoginView.swift */; };
+		076187252B497DBF00DAB47F /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076187242B497DBF00DAB47F /* AuthenticationManager.swift */; };
+		076187282B49B0DF00DAB47F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 076187272B49B0DF00DAB47F /* GoogleSignIn */; };
+		0761872A2B49B0DF00DAB47F /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 076187292B49B0DF00DAB47F /* GoogleSignInSwift */; };
+		0761872D2B49B8CA00DAB47F /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0761872C2B49B8CA00DAB47F /* AuthenticationViewModel.swift */; };
+		076187302B49BB3B00DAB47F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0761872F2B49BB3B00DAB47F /* Utilities.swift */; };
+		079B39162B51A227003F9997 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B39152B51A227003F9997 /* LoadingView.swift */; };
+		079B39182B51B16E003F9997 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B39172B51B16E003F9997 /* CanvasView.swift */; };
+		079B391B2B51B2FF003F9997 /* ColorsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B391A2B51B2FF003F9997 /* ColorsEnum.swift */; };
+		079B391E2B51B4BE003F9997 /* ColorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B391D2B51B4BE003F9997 /* ColorsViewModel.swift */; };
+		079B39202B51B923003F9997 /* ThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B391F2B51B923003F9997 /* ThreadView.swift */; };
+		07D9E98C2B5144FB009511DA /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07D9E98B2B5144FB009511DA /* Pacifico-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +62,16 @@
 		076186E62B3C945500DAB47F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0761871F2B3C979D00DAB47F /* Spillit-IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Spillit-IOS.entitlements"; sourceTree = "<group>"; };
 		076187212B3C990300DAB47F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		076187242B497DBF00DAB47F /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		0761872B2B49B19D00DAB47F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0761872C2B49B8CA00DAB47F /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		0761872F2B49BB3B00DAB47F /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		079B39152B51A227003F9997 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		079B39172B51B16E003F9997 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		079B391A2B51B2FF003F9997 /* ColorsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsEnum.swift; sourceTree = "<group>"; };
+		079B391D2B51B4BE003F9997 /* ColorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewModel.swift; sourceTree = "<group>"; };
+		079B391F2B51B923003F9997 /* ThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadView.swift; sourceTree = "<group>"; };
+		07D9E98B2B5144FB009511DA /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +86,14 @@
 				076186EA2B3C94E500DAB47F /* FirebaseAnalytics in Frameworks */,
 				076186EC2B3C94E500DAB47F /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				076187122B3C94E500DAB47F /* FirebaseMLModelDownloader in Frameworks */,
+				0761872A2B49B0DF00DAB47F /* GoogleSignInSwift in Frameworks */,
 				076187062B3C94E500DAB47F /* FirebaseFirestoreSwift in Frameworks */,
 				076186F22B3C94E500DAB47F /* FirebaseAppCheck in Frameworks */,
 				076186F02B3C94E500DAB47F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				076186F62B3C94E500DAB47F /* FirebaseAuth in Frameworks */,
 				076186FA2B3C94E500DAB47F /* FirebaseCrashlytics in Frameworks */,
 				0761871A2B3C94E500DAB47F /* FirebaseRemoteConfigSwift in Frameworks */,
+				076187282B49B0DF00DAB47F /* GoogleSignIn in Frameworks */,
 				0761870C2B3C94E500DAB47F /* FirebaseInAppMessaging-Beta in Frameworks */,
 				076186FE2B3C94E500DAB47F /* FirebaseDatabaseSwift in Frameworks */,
 				076187082B3C94E500DAB47F /* FirebaseFunctions in Frameworks */,
@@ -110,11 +133,16 @@
 		076186D72B3C943E00DAB47F /* Spillit-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				079B391C2B51B4A3003F9997 /* ViewModel */,
+				079B39192B51B2DA003F9997 /* Model */,
+				07C580402B51425F00C78A95 /* Fonts */,
+				0761872E2B49BB1B00DAB47F /* Utilities */,
+				0761872B2B49B19D00DAB47F /* Info.plist */,
+				076187232B497D9C00DAB47F /* Authentication */,
 				076187202B3C98D400DAB47F /* View */,
 				0761871F2B3C979D00DAB47F /* Spillit-IOS.entitlements */,
 				076186E62B3C945500DAB47F /* GoogleService-Info.plist */,
 				076186D82B3C943E00DAB47F /* Spillit_IOSApp.swift */,
-				076186DA2B3C943E00DAB47F /* ContentView.swift */,
 				076186DC2B3C943F00DAB47F /* Assets.xcassets */,
 				076186DE2B3C943F00DAB47F /* Preview Content */,
 			);
@@ -132,9 +160,54 @@
 		076187202B3C98D400DAB47F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				076186DA2B3C943E00DAB47F /* ContentView.swift */,
 				076187212B3C990300DAB47F /* LoginView.swift */,
+				079B39152B51A227003F9997 /* LoadingView.swift */,
+				079B39172B51B16E003F9997 /* CanvasView.swift */,
+				079B391F2B51B923003F9997 /* ThreadView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		076187232B497D9C00DAB47F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				076187242B497DBF00DAB47F /* AuthenticationManager.swift */,
+				0761872C2B49B8CA00DAB47F /* AuthenticationViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		0761872E2B49BB1B00DAB47F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0761872F2B49BB3B00DAB47F /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		079B39192B51B2DA003F9997 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				079B391A2B51B2FF003F9997 /* ColorsEnum.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		079B391C2B51B4A3003F9997 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				079B391D2B51B4BE003F9997 /* ColorsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		07C580402B51425F00C78A95 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				07D9E98B2B5144FB009511DA /* Pacifico-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +254,8 @@
 				076187192B3C94E500DAB47F /* FirebaseRemoteConfigSwift */,
 				0761871B2B3C94E500DAB47F /* FirebaseStorage */,
 				0761871D2B3C94E500DAB47F /* FirebaseStorageCombine-Community */,
+				076187272B49B0DF00DAB47F /* GoogleSignIn */,
+				076187292B49B0DF00DAB47F /* GoogleSignInSwift */,
 			);
 			productName = "Spillit-IOS";
 			productReference = 076186D52B3C943E00DAB47F /* Spillit-IOS.app */;
@@ -212,6 +287,7 @@
 			mainGroup = 076186CC2B3C943E00DAB47F;
 			packageReferences = (
 				076186E82B3C94E500DAB47F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				076187262B49B0DF00DAB47F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 076186D62B3C943E00DAB47F /* Products */;
 			projectDirPath = "";
@@ -228,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				076186E02B3C943F00DAB47F /* Preview Assets.xcassets in Resources */,
+				07D9E98C2B5144FB009511DA /* Pacifico-Regular.ttf in Resources */,
 				076186DD2B3C943F00DAB47F /* Assets.xcassets in Resources */,
 				076186E72B3C945500DAB47F /* GoogleService-Info.plist in Resources */,
 			);
@@ -240,9 +317,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076187302B49BB3B00DAB47F /* Utilities.swift in Sources */,
+				079B39202B51B923003F9997 /* ThreadView.swift in Sources */,
 				076187222B3C990300DAB47F /* LoginView.swift in Sources */,
+				079B39182B51B16E003F9997 /* CanvasView.swift in Sources */,
+				0761872D2B49B8CA00DAB47F /* AuthenticationViewModel.swift in Sources */,
+				079B391E2B51B4BE003F9997 /* ColorsViewModel.swift in Sources */,
+				076187252B497DBF00DAB47F /* AuthenticationManager.swift in Sources */,
 				076186DB2B3C943E00DAB47F /* ContentView.swift in Sources */,
+				079B39162B51A227003F9997 /* LoadingView.swift in Sources */,
 				076186D92B3C943E00DAB47F /* Spillit_IOSApp.swift in Sources */,
+				079B391B2B51B2FF003F9997 /* ColorsEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +465,7 @@
 				DEVELOPMENT_TEAM = XDLTC556W4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Spillit-IOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -410,6 +496,7 @@
 				DEVELOPMENT_TEAM = XDLTC556W4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Spillit-IOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,6 +545,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.19.1;
+			};
+		};
+		076187262B49B0DF00DAB47F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -597,6 +692,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 076186E82B3C94E500DAB47F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		076187272B49B0DF00DAB47F /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 076187262B49B0DF00DAB47F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		076187292B49B0DF00DAB47F /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 076187262B49B0DF00DAB47F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

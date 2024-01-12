@@ -15,6 +15,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     return true
   }
+    
+    
 }
 
 @main
@@ -28,3 +30,4 @@ struct Spillit_IOSApp: App {
         }
     }
 }
+
