@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07088F2B2B52D28D005537D4 /* LoadingThreadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07088F2A2B52D28D005537D4 /* LoadingThreadsView.swift */; };
+		07088F2D2B52D3FB005537D4 /* EmptyThreadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07088F2C2B52D3FB005537D4 /* EmptyThreadsView.swift */; };
+		07088F2F2B53AD3F005537D4 /* NewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07088F2E2B53AD3F005537D4 /* NewNoteView.swift */; };
+		07088F312B53B2E9005537D4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07088F302B53B2E9005537D4 /* ProfileView.swift */; };
 		076186D92B3C943E00DAB47F /* Spillit_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076186D82B3C943E00DAB47F /* Spillit_IOSApp.swift */; };
 		076186DB2B3C943E00DAB47F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076186DA2B3C943E00DAB47F /* ContentView.swift */; };
 		076186DD2B3C943F00DAB47F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076186DC2B3C943F00DAB47F /* Assets.xcassets */; };
@@ -50,10 +54,24 @@
 		079B391B2B51B2FF003F9997 /* ColorsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B391A2B51B2FF003F9997 /* ColorsEnum.swift */; };
 		079B391E2B51B4BE003F9997 /* ColorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B391D2B51B4BE003F9997 /* ColorsViewModel.swift */; };
 		079B39202B51B923003F9997 /* ThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B391F2B51B923003F9997 /* ThreadView.swift */; };
+		07BCA2B82B540BB600391717 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCA2B72B540BB600391717 /* SettingsView.swift */; };
+		07BCA2BA2B540CA300391717 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCA2B92B540CA300391717 /* AppState.swift */; };
+		07BCA2BC2B540CF100391717 /* PageLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCA2BB2B540CF100391717 /* PageLocation.swift */; };
+		07BCA2BE2B540DA400391717 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCA2BD2B540DA400391717 /* LoadingState.swift */; };
+		07BCA2C02B540DF200391717 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCA2BF2B540DF200391717 /* UserModel.swift */; };
+		07BCA2C22B5412C500391717 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCA2C12B5412C500391717 /* ErrorView.swift */; };
+		07BCA2C42B541D8700391717 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCA2C32B541D8700391717 /* UserViewModel.swift */; };
+		07BCA2C62B54408A00391717 /* ThreadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCA2C52B54408A00391717 /* ThreadsView.swift */; };
+		07BCA2C82B5440D900391717 /* ThreadsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCA2C72B5440D900391717 /* ThreadsViewModel.swift */; };
+		07BCA2CA2B550B4400391717 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BCA2C92B550B4400391717 /* NoteModel.swift */; };
 		07D9E98C2B5144FB009511DA /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07D9E98B2B5144FB009511DA /* Pacifico-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07088F2A2B52D28D005537D4 /* LoadingThreadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingThreadsView.swift; sourceTree = "<group>"; };
+		07088F2C2B52D3FB005537D4 /* EmptyThreadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyThreadsView.swift; sourceTree = "<group>"; };
+		07088F2E2B53AD3F005537D4 /* NewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
+		07088F302B53B2E9005537D4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		076186D52B3C943E00DAB47F /* Spillit-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spillit-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		076186D82B3C943E00DAB47F /* Spillit_IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spillit_IOSApp.swift; sourceTree = "<group>"; };
 		076186DA2B3C943E00DAB47F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +89,16 @@
 		079B391A2B51B2FF003F9997 /* ColorsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsEnum.swift; sourceTree = "<group>"; };
 		079B391D2B51B4BE003F9997 /* ColorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewModel.swift; sourceTree = "<group>"; };
 		079B391F2B51B923003F9997 /* ThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadView.swift; sourceTree = "<group>"; };
+		07BCA2B72B540BB600391717 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		07BCA2B92B540CA300391717 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		07BCA2BB2B540CF100391717 /* PageLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLocation.swift; sourceTree = "<group>"; };
+		07BCA2BD2B540DA400391717 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		07BCA2BF2B540DF200391717 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		07BCA2C12B5412C500391717 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		07BCA2C32B541D8700391717 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		07BCA2C52B54408A00391717 /* ThreadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsView.swift; sourceTree = "<group>"; };
+		07BCA2C72B5440D900391717 /* ThreadsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsViewModel.swift; sourceTree = "<group>"; };
+		07BCA2C92B550B4400391717 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		07D9E98B2B5144FB009511DA /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +193,13 @@
 				079B39152B51A227003F9997 /* LoadingView.swift */,
 				079B39172B51B16E003F9997 /* CanvasView.swift */,
 				079B391F2B51B923003F9997 /* ThreadView.swift */,
+				07088F2A2B52D28D005537D4 /* LoadingThreadsView.swift */,
+				07088F2C2B52D3FB005537D4 /* EmptyThreadsView.swift */,
+				07088F2E2B53AD3F005537D4 /* NewNoteView.swift */,
+				07088F302B53B2E9005537D4 /* ProfileView.swift */,
+				07BCA2B72B540BB600391717 /* SettingsView.swift */,
+				07BCA2C12B5412C500391717 /* ErrorView.swift */,
+				07BCA2C52B54408A00391717 /* ThreadsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +225,11 @@
 			isa = PBXGroup;
 			children = (
 				079B391A2B51B2FF003F9997 /* ColorsEnum.swift */,
+				07BCA2B92B540CA300391717 /* AppState.swift */,
+				07BCA2BB2B540CF100391717 /* PageLocation.swift */,
+				07BCA2BD2B540DA400391717 /* LoadingState.swift */,
+				07BCA2BF2B540DF200391717 /* UserModel.swift */,
+				07BCA2C92B550B4400391717 /* NoteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				079B391D2B51B4BE003F9997 /* ColorsViewModel.swift */,
+				07BCA2C32B541D8700391717 /* UserViewModel.swift */,
+				07BCA2C72B5440D900391717 /* ThreadsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -317,17 +359,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BCA2CA2B550B4400391717 /* NoteModel.swift in Sources */,
+				07BCA2C82B5440D900391717 /* ThreadsViewModel.swift in Sources */,
+				07BCA2BE2B540DA400391717 /* LoadingState.swift in Sources */,
+				07BCA2C42B541D8700391717 /* UserViewModel.swift in Sources */,
 				076187302B49BB3B00DAB47F /* Utilities.swift in Sources */,
 				079B39202B51B923003F9997 /* ThreadView.swift in Sources */,
 				076187222B3C990300DAB47F /* LoginView.swift in Sources */,
+				07BCA2C22B5412C500391717 /* ErrorView.swift in Sources */,
+				07088F2F2B53AD3F005537D4 /* NewNoteView.swift in Sources */,
+				07088F2B2B52D28D005537D4 /* LoadingThreadsView.swift in Sources */,
+				07BCA2BC2B540CF100391717 /* PageLocation.swift in Sources */,
 				079B39182B51B16E003F9997 /* CanvasView.swift in Sources */,
+				07BCA2BA2B540CA300391717 /* AppState.swift in Sources */,
 				0761872D2B49B8CA00DAB47F /* AuthenticationViewModel.swift in Sources */,
+				07088F312B53B2E9005537D4 /* ProfileView.swift in Sources */,
+				07088F2D2B52D3FB005537D4 /* EmptyThreadsView.swift in Sources */,
+				07BCA2B82B540BB600391717 /* SettingsView.swift in Sources */,
 				079B391E2B51B4BE003F9997 /* ColorsViewModel.swift in Sources */,
 				076187252B497DBF00DAB47F /* AuthenticationManager.swift in Sources */,
 				076186DB2B3C943E00DAB47F /* ContentView.swift in Sources */,
 				079B39162B51A227003F9997 /* LoadingView.swift in Sources */,
 				076186D92B3C943E00DAB47F /* Spillit_IOSApp.swift in Sources */,
+				07BCA2C02B540DF200391717 /* UserModel.swift in Sources */,
 				079B391B2B51B2FF003F9997 /* ColorsEnum.swift in Sources */,
+				07BCA2C62B54408A00391717 /* ThreadsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

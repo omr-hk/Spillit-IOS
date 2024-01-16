@@ -10,6 +10,14 @@ import SwiftUI
 
 class ColorsViewModel{
     static let shared = ColorsViewModel()
+    let dict:[String : ColorsEnum] = [
+        "beige" : .beige,
+        "blue" : .blue,
+        "green" : .green,
+        "orange" : .orange,
+        "pink" : .pink,
+        "purple" : .purple
+    ]
     func getColors(value: ColorsEnum) -> [String : Color]{
         switch value {
         case .beige:
@@ -37,6 +45,26 @@ class ColorsViewModel{
                 "background" : Color(red: 253/255, green: 217/255, blue: 152/255),
                 "thread" : Color(red: 255/255, green: 236/255, blue: 199/255)
             ]
+        case .purple:
+            return [
+                "background" : Color(red: 208/255, green: 191/255, blue: 255/255),
+                "thread" : Color(red: 223/255, green: 204/255, blue: 251/255)
+            ]
         }
+    }
+    
+    func getEnum(value: String) -> ColorsEnum{
+        return(dict[value] ?? .beige)
+    }
+    
+    func getString(value: ColorsEnum) -> String{
+        return dict.key(from: value) ?? "beige"
+    }
+}
+
+
+extension Dictionary where Value: Equatable {
+    func key(from value: Value) -> Key? {
+        return self.first(where: { $0.value == value })?.key
     }
 }

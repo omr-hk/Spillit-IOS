@@ -13,4 +13,5 @@ enum ColorsEnum {
     case blue
     case pink
     case orange
+    case purple
 }

@@ -9,21 +9,67 @@ import SwiftUI
 
 struct ThreadView: View {
     let CVM: ColorsViewModel = .shared
-    let color: ColorsEnum
+    @State var note: NoteModel
+    @ObservedObject var uvm: UserViewModel = .shared
+    @ObservedObject var tvm: ThreadsViewModel = .shared
+    @State var dname: String = "Unavailable"
     var body: some View {
         VStack{
-            Text("Aliquam volutpat pharetra ex v")
+            Text(note.title)
                 .font(.title2)
                 .fontWeight(.semibold)
                 .padding()
                 .multilineTextAlignment(.center)
-            Text("Aliquam volutpat pharetra ex vel pharetra. Sed eget nunc at eros lacinia facilisis. Etiam consectetur quam at semper condimentum. Suspendisse potenti. Sed dolor tortor, volutpat sit amet leo a, tristique semper dui. Donec eget suscipit augue, in finibus velit. Curabitur ac dui pulvinar, pellentesque purus et, ultricies leo. Aliquam venenatis, mauris posuere rutrum iaculis, quam tortor porta eros, luctus fringilla dolor sapien ac purus. Aliquam luctus nec nunc at congue.")
+            Text(note.content)
                 .multilineTextAlignment(.center)
                 .padding()
+            HStack{
+                if note.uid == uvm.user!.uid{
+                    Image(systemName: "heart")
+                        .font(.title3)
+                }
+                else{
+                    if note.likes.contains(uvm.user!.uid){
+                        Image(systemName: "heart.fill")
+                            .font(.title3)
+                            .onTapGesture {
+                                note.likes.removeAll { like in
+                                    like == uvm.user!.uid
+                                }
+                                Task{
+                                    await tvm.unlikePost(id:note.id,uid:uvm.user!.uid)
+                                }
+                            }
+                    }
+                    else{
+                        Image(systemName: "heart")
+                            .font(.title3)
+                            .onTapGesture {
+                                note.likes.append(uvm.user!.uid)
+                                Task{
+                                    await tvm.likePost(id:note.id,uid:uvm.user!.uid)
+                                }
+                            }
+                    }
+                }
+                Text("\(note.likes.count)")
+                Spacer()
+                Text(dname)
+                    .onAppear{
+                        Task{
+                            await uvm.getDisplayName(uid:note.uid)
+                            if uvm.state.0 == .loaded{
+                                dname = uvm.state.1
+                            }
+                        }
+                    }
+            }
+            .font(.caption)
+            .padding()
         }
         .padding()
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-        .background(CVM.getColors(value: color)["thread"] ?? Color(red: 235/255, green: 217/255, blue: 180/255))
+        .background(CVM.getColors(value: uvm.user!.colorPreference)["thread"] ?? Color(red: 235/255, green: 217/255, blue: 180/255))
         .cornerRadius(15)
     }
 }

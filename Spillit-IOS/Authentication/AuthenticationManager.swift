@@ -32,9 +32,28 @@ final class AuthenticationManager{
         return AuthDataResultModel(user: authResult.user)
     }
     
-    @discardableResult
+    func signOut() async -> (AuthState, String){
+        let auth = Auth.auth()
+        do{
+            try auth.signOut()
+            return (.success,"Logged out user")
+        }catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+            return (.failure,"\(signOutError)")
+          }
+    }
+    
     func signInWithGoogle(tokens: GoogleSignInResultModel) async throws -> AuthDataResultModel{
         let credential = GoogleAuthProvider.credential(withIDToken: tokens.idToken, accessToken: tokens.accessToken)
         return try await signIn(credential: credential)
+    }
+    
+    func checkUser() async -> (Bool, String){
+        if Auth.auth().currentUser != nil{
+            return (true, Auth.auth().currentUser!.uid)
+        }
+        else{
+            return (false, "No user found")
+        }
     }
 }

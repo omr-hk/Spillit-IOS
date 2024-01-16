@@ -12,6 +12,9 @@ import GoogleSignInSwift
 
 
 struct LoginView: View {
+    @ObservedObject var AVM: AuthenticationViewModel = .init()
+    @AppStorage("uid") var uid = ""
+    @Binding var appState: AppState
     var body: some View {
         ZStack{
             VStack{
@@ -30,7 +33,16 @@ struct LoginView: View {
                 }
                 
                 Button(action: {
-                    
+                    Task{
+                        do{
+                            try await AVM.signInWithGoogle()
+                            uid = AVM.state.1
+                            print(uid)
+                            appState = .homepage
+                        }catch{
+                            print(AVM.state.1)
+                        }
+                    }
                 }, label: {
                     HStack{
                         Image(uiImage: UIImage(named: "google")!)
@@ -57,9 +69,6 @@ struct LoginView: View {
     }
 }
 
-#Preview {
-    LoginView()
-}
 
 struct SignInWithAppleButtonViewRepresentable: UIViewRepresentable{
     let type:ASAuthorizationAppleIDButton.ButtonType
