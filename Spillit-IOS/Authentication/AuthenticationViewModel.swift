@@ -42,4 +42,8 @@ final class AuthenticationViewModel:ObservableObject{
     func signOut() async{
         state = await AuthenticationManager.shared.signOut()
     }
+    
+    func deletAccount() async{
+        state = await AuthenticationManager.shared.deleteAccount()
+    }
 }

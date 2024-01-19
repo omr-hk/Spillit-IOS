@@ -82,5 +82,21 @@ class UserViewModel: ObservableObject{
         }
     }
     
+    func deleteAccountData() async -> Bool{
+        let ref = db.collection("Notes").whereField("uid", isEqualTo: user!.uid)
+        do{
+            try await db.collection("UserData").document(user!.uid).delete()
+            let querySnapshot = try await ref.getDocuments()
+            if !querySnapshot.isEmpty{
+                for document in querySnapshot.documents{
+                   try await db.collection("Notes").document(document.documentID).delete()
+                }
+            }
+            return true
+        }catch{
+            return false
+        }
+    }
+    
 
 }

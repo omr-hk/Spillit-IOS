@@ -54,6 +54,22 @@ struct ThreadView: View {
                 }
                 Text("\(note.likes.count)")
                 Spacer()
+                if note.uid == uvm.user!.uid{
+                    Image(systemName: "xmark.bin.circle.fill")
+                        .font(.title3)
+                        .foregroundStyle(.red)
+                        .onTapGesture {
+                            Task{
+                                let r: Bool = await tvm.deleteNote(id: note.id)
+                                if r{
+                                    tvm.notes.removeAll(where: { element in
+                                        element.id == note.id
+                                    })
+                                }
+                            }
+                        }
+                    Spacer()
+                }
                 Text(dname)
                     .onAppear{
                         Task{

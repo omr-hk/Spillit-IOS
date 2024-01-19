@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var appState: AppState = .loading
     @AppStorage("uid") var uid: String = ""
+    let v: Int = 50
     let am: AuthenticationManager = .shared
     var body: some View {
         switch appState {
@@ -20,10 +21,14 @@ struct ContentView: View {
                         let result:(Bool, String) = await am.checkUser()
                         if result.0{
                             uid = result.1
-                            appState = .homepage
+                            withAnimation {
+                                appState = .homepage
+                            }
                         }
                         else{
-                            appState = .login
+                            withAnimation {
+                                appState = .login
+                            }
                         }
                     }
                 }
@@ -32,7 +37,7 @@ struct ContentView: View {
         case .homepage:
             CanvasView(appState: $appState)
         case .error:
-            ErrorView()
+            ErrorView(content: "Error at loading")
         }
     }
 }

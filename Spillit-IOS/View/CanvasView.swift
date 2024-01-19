@@ -64,7 +64,7 @@ struct CanvasView: View {
                                         settings = "gearshape"
                                     }
                             case .error:
-                                ErrorView()
+                                ErrorView(content: "Error loading canvas")
                             case .loading:
                                 LoadingThreadsView()
                                     .onAppear{
@@ -134,6 +134,7 @@ struct CanvasView: View {
                 }
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,maxHeight: .infinity)
                 .background(CVM.getColors(value: uvm.user!.colorPreference)["background"] ?? Color(red: 192/255, green: 150/255, blue: 94/255),ignoresSafeAreaEdges: .all)
+
             }
             else{
                 LoadingView()
@@ -145,7 +146,7 @@ struct CanvasView: View {
             }
 
         case .error:
-            ErrorView()
+            ErrorView(content: uvm.state.1)
         }
     }
 }

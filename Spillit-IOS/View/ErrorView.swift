@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ErrorView: View {
+    let content: String
     var body: some View {
         ZStack{
             VStack{
@@ -20,7 +21,7 @@ struct ErrorView: View {
                     .font(Font.custom("Pacifico-Regular", size: 30))
                     .foregroundStyle(.white)
                 
-                Text("error message error messsage error message")
+                Text(content)
                     .foregroundStyle(.red)
                     .padding()
                     .multilineTextAlignment(.center)
@@ -30,8 +31,4 @@ struct ErrorView: View {
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/,maxHeight: .infinity)
         .background(Color(.black),ignoresSafeAreaEdges: .all)
     }
-}
-
-#Preview {
-    ErrorView()
 }

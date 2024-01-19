@@ -13,6 +13,7 @@ struct SettingsView: View {
     @ObservedObject var avm: AuthenticationViewModel = .init()
     @AppStorage("uid") var uid = ""
     @Binding var appState: AppState
+    @State var isPresented: Bool = false
     var body: some View {
         VStack{
             Spacer()
@@ -40,7 +41,9 @@ struct SettingsView: View {
                         await avm.signOut()
                         if avm.state.0 == .success{
                             uid = ""
-                            appState = .loading
+                            withAnimation {
+                                appState = .loading
+                            }
                             print("User signed out successfully")
                         }
                         else{
@@ -58,7 +61,9 @@ struct SettingsView: View {
                         .cornerRadius(15)
                 })
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    isPresented.toggle()
+                }, label: {
                     Text("Delete Account")
                         .foregroundStyle(.red)
                         .fontWeight(.semibold)
@@ -68,6 +73,56 @@ struct SettingsView: View {
                         .background(CVM.getColors(value: uvm.user!.colorPreference)["thread"])
                         .cornerRadius(15)
                 })
+                .sheet(isPresented: $isPresented){
+                    VStack{
+                        Text("Delete Account")
+                            .font(.title2)
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .padding()
+                        Text("By clicking the Delete below button, your posts and all your data will be deleted along with your account")
+                            .padding()
+                            .fontWeight(.light)
+                            .font(.caption)
+                            .multilineTextAlignment(.center)
+                        
+                        Button(action: {
+                            isPresented.toggle()
+                        }) {
+                            Text("Dismiss")
+                                .padding()
+                                .foregroundStyle(.black)
+                                .frame(width: 300)
+                                .background(Color(red: 245/255, green: 246/255, blue: 247/255,opacity:0.5))
+                                .cornerRadius(15)
+                        }
+                        
+                        Button(action: {
+                            Task{
+                                let result: Bool = await uvm.deleteAccountData()
+                                if result{
+                                    await avm.deletAccount()
+                                    if avm.state.0 == .success{
+                                        isPresented.toggle()
+                                        uid = ""
+                                        withAnimation {
+                                            appState = .loading
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }) {
+                            Text("Delete")
+                                .padding()
+                                .foregroundStyle(.red)
+                                .frame(width: 300)
+                                .background(Color(red: 245/255, green: 246/255, blue: 247/255,opacity:0.5))
+                                .cornerRadius(15)
+                        }
+                    }
+                    .presentationDetents([.height(500)])
+                    .presentationBackground(CVM.getColors(value: uvm.user!.colorPreference)["thread"] ?? Color(red: 235/255, green: 217/255, blue: 180/255))
+                }
             }
             .padding()
         }
@@ -83,7 +138,9 @@ struct ColorTile: View {
     var body: some View {
         Button(action: {
             Task{
-                uvm.user!.colorPreference = color
+                withAnimation {
+                    uvm.user!.colorPreference = color
+                }
                 await uvm.changeColorPreference(color:cvm.getString(value: color))
             }
         }, label: {

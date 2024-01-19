@@ -56,4 +56,14 @@ final class AuthenticationManager{
             return (false, "No user found")
         }
     }
+    
+    func deleteAccount() async -> (AuthState, String){
+        do{
+            try await Auth.auth().currentUser?.delete()
+        }catch{
+            return (.failure,"\(error.localizedDescription)")
+        }
+        
+        return (.success,"Deleted user")
+    }
 }

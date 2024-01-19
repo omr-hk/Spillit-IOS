@@ -33,6 +33,16 @@ class ThreadsViewModel: ObservableObject{
         }
     }
     
+    func deleteNote(id:String) async -> Bool{
+        do{
+            try await db.collection("Notes").document(id).delete()
+        }catch{
+            return false
+        }
+        
+        return true
+    }
+    
     func initialFetch() async {
         state = (.loading,"")
         let ref = db.collection("Notes").order(by: "time", descending: true).limit(to: 5)

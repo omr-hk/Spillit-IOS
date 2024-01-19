@@ -35,13 +35,15 @@ struct NewNoteView: View {
                     }
                     
                     VStack{
-                        HStack{
-                            Text("Content")
-                                .font(.title3)
-                                .fontWeight(.light)
-                            Spacer()
+                        if !istFocused{
+                            HStack{
+                                Text("Content")
+                                    .font(.title3)
+                                    .fontWeight(.light)
+                                Spacer()
+                            }
+                            .padding()
                         }
-                        .padding()
                         TextEditor(text: $content)
                             .focused($istFocused)
                             .padding()
