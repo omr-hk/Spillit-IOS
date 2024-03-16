@@ -9,9 +9,9 @@ https://github.com/omr-hk/Spillit-IOS/assets/111275526/238f258d-f12d-4b33-96e7-0
 
 https://github.com/omr-hk/Spillit-IOS/assets/111275526/dcdfa41e-f63e-4cd6-9a12-5b38287a67c0
 
-<img width="1170" alt="Screenshot 2024-02-20 at 2 37 55 PM" src="https://github.com/omr-hk/Spillit-IOS/assets/111275526/9ef20c8c-a2ec-4775-8f3f-c7eff787981d">
-<img width="1170" alt="Screenshot 2024-02-20 at 2 37 55 PM" src="https://github.com/omr-hk/Spillit-IOS/assets/111275526/0471ffe0-1103-4bae-a799-e684aae7de81">
-<img width="1170" alt="Screenshot 2024-02-20 at 2 37 55 PM" src="https://github.com/omr-hk/Spillit-IOS/assets/111275526/4fce3e86-4961-46aa-9c13-108c8a426aab">
-<img width="1170" alt="Screenshot 2024-02-20 at 2 37 55 PM" src="https://github.com/omr-hk/Spillit-IOS/assets/111275526/a8b7064c-eb96-4c3d-b699-34f34c548704">
-<img width="1170" alt="Screenshot 2024-02-20 at 2 37 55 PM" src="https://github.com/omr-hk/Spillit-IOS/assets/111275526/39a7dfda-0606-4adb-a4b8-b1cc9f9fdefd">
-<img width="1170" alt="Screenshot 2024-02-20 at 2 37 55 PM" src="https://github.com/omr-hk/Spillit-IOS/assets/111275526/ddd7bfdc-3b5c-4538-8b03-ad310f0fb665">
+<img width="800" alt="Screenshot 2024-02-20 at 2 37 55 PM" src="https://github.com/omr-hk/Spillit-IOS/assets/111275526/9ef20c8c-a2ec-4775-8f3f-c7eff787981d">
+<img width="800" alt="Screenshot 2024-02-20 at 2 37 55 PM" src="https://github.com/omr-hk/Spillit-IOS/assets/111275526/0471ffe0-1103-4bae-a799-e684aae7de81">
+<img width="800" alt="Screenshot 2024-02-20 at 2 37 55 PM" src="https://github.com/omr-hk/Spillit-IOS/assets/111275526/4fce3e86-4961-46aa-9c13-108c8a426aab">
+<img width="800" alt="Screenshot 2024-02-20 at 2 37 55 PM" src="https://github.com/omr-hk/Spillit-IOS/assets/111275526/a8b7064c-eb96-4c3d-b699-34f34c548704">
+<img width="800" alt="Screenshot 2024-02-20 at 2 37 55 PM" src="https://github.com/omr-hk/Spillit-IOS/assets/111275526/39a7dfda-0606-4adb-a4b8-b1cc9f9fdefd">
+<img width="800" alt="Screenshot 2024-02-20 at 2 37 55 PM" src="https://github.com/omr-hk/Spillit-IOS/assets/111275526/ddd7bfdc-3b5c-4538-8b03-ad310f0fb665">
